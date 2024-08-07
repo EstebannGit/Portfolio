@@ -6,4 +6,6 @@ Things you may want to cover:
 
 * Ruby version: 3.3.4
 
-* Running on Windows
+* Rails version: 7.1.3.4
+
+* Created on Windows OS
