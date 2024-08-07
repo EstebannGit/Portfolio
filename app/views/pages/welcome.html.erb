@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome to my Portfolio</h1>
+  </header>
+
+  <main>
+    <p>Your tagline summarizing what you do</p>
+    <a href="#" class="btn-view-work">View my Work</a>
+  </main>
+  
+  <footer>
+    <div class="social-media">
+      <a href="https://www.instagram.com/aballayesteban/" target="_blank">
+        <%= image_tag "instagram.png", alt:"Instagram" %>
+      </a>
+      </a>
+      <a href="https://www.linkedin.com/in/esteban-aballay-7667431ba" target="_blank">
+        <%= image_tag "linkedin.png", alt:"LinkedIn" %> 
+      </a>
+      <a href="https://github.com/EstebannGit" target="_blank" >
+        <%= image_tag "github.png", alt:"GitHub" %>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
