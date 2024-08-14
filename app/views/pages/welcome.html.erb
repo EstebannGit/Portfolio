@@ -9,11 +9,24 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li> <a href="<%= root_path %>"> Home </a> </li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+
+        <% if user_signed_in? && current_user.admin? %>
+          <li><a href="<%= admin_dashboard_path %>">Admin Dashboard</a></li>
+        <% end %>
+
+        <% if user_signed_in? %>
+          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+
+        <% else %>
+          <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>
+
       </ul>
     </nav>
+
     <h1>Welcome to my Portfolio</h1>
   </header>
 
@@ -24,6 +37,7 @@
   
   <footer>
     <div class="social-media">
+      <h3>Make Sure to follow me on all my personal/professional social medias accounts!</h3>
       <a href="https://www.instagram.com/aballayesteban/" target="_blank">
         <%= image_tag "instagram.png", alt:"Instagram" %>
       </a>
